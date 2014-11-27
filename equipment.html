@@ -7,6 +7,15 @@
 
     <title>Tents-N-Stuff LLC - Party Tents, Graduation Parties, Weddings - Findlay, Ohio</title>
     <meta name="description" content="Tents-N-Stuff is your place for party tent rentals in the Findlay, Ohio area. We rent tents of all sizes, tables, and chairs for any occasion. Weddings, Graduation Parties, Family Get-Togethers, we can help make any celebration a great one!">
+    <style>
+    #printable { display: none; }
+
+    @media print
+    {
+      #non-printable { display: none; }
+      #printable { display: block; }
+    }
+    </style>
   <head>
       
 <script src="js/jquery-2.1.1.js"></script>
@@ -45,7 +54,8 @@ var map=new google.maps.Map(document.getElementById("googleMap")
 google.maps.event.addDomListener(window, 'load', initialize);
 </script>
   </head>
-  <body>     
+  <body>
+  <div id="non-printable">     
      <div class="sticky">
  <nav class="top-bar" data-topbar>
     <ul class="title-area">
@@ -132,7 +142,7 @@ google.maps.event.addDomListener(window, 'load', initialize);
           </div>
  
  
-          <div class="large-6 columns">
+          <div class="large-6 columns text-center">
  
             <h3 class="show-for-small">Equipment<hr/></h3>
  
@@ -142,7 +152,7 @@ google.maps.event.addDomListener(window, 'load', initialize);
             </div>
  
           <div class="row">
-              <div class="large-6 small-6 columns">
+              <div class="large-6 medium-6 small-6 columns text-center">
                 <div class="panel">
                   <h5>Prices</h5>
                 <h6 class="subheader">We have competitive prices with any company around.</h6>
@@ -151,7 +161,7 @@ google.maps.event.addDomListener(window, 'load', initialize);
                 </div>
               </div>
  
-              <div class="large-6 small-6 columns">
+              <div class="large-6 medium-6 small-6 columns text-center">
                 <div class="panel">
                   <h5>Gallery</h5>
                 <h6 class="subheader">See images of a few of the different tents we offer.</h6>
@@ -183,21 +193,21 @@ google.maps.event.addDomListener(window, 'load', initialize);
           <h3>Equipment</h3><hr>
         </div>
  
-          <div class="large-4 small-6 columns">
+          <div class="large-4 small-4 columns">
             <img style="height:auto;width:500px;" src="img/BanquetTable.jpg">
             <div class="panel">
               <p>8' Banquet Tables</p>
             </div>
           </div>
  
-          <div class="large-4 small-6 columns">
+          <div class="large-4 small-4 columns">
             <img style="height:auto;width:500px;" src="img/RoundTableEdit.jpg">
             <div class="panel">
               <p>5' Round Tables</p>
             </div>
           </div>
  
-          <div class="large-4 small-6 columns">
+          <div class="large-4 small-4 columns">
             <img style="height:auto;width:500px;" src="img/BistroTableEdit.jpg">
             <div class="panel">
               <p>Bistro Tables</p>
@@ -205,28 +215,38 @@ google.maps.event.addDomListener(window, 'load', initialize);
           </div>
  </div>
   <div class="row" style="margin-top:25px;">
-          <div class="large-4 small-6 columns">
+          <div class="large-4 small-4 columns">
             <img style="height:auto;width:500px;" src="img/WhiteChair.jpg">
             <div class="panel">
               <p>White Chairs</p>
             </div>
           </div>
-          <div class="large-4 small-6 columns">
+          <div class="large-4 small-4 columns">
             <img style="height:auto;width:500px;" src="img/StandardChairEdit.png">
             <div class="panel">
               <p>Standard Chairs</p>
             </div>
           </div>
- <div class="large-4 small-6 columns">
+ <div class="large-4 small-4 show-for-medium-up columns text-center">
                 <div class="panel">
                   <h5>Set-Ups</h5>
                 <h6 class="subheader">View our suggested layout guides for all different tents.</h6>
-                <a href="#" style="background:#3B5998;" class="small button button3">Layouts</a>
+                <a href="#" style="background:#3B5998;" class="small button button3" style="max-width:100%;">Layouts</a>
                 <a class="fancyboxlayout" rel="fancyboxlayout" href="img/20x20TableChairLayout.jpg" title="Table and chair layout for a 20 ft. by 20 ft. tent."></a>
                 <a class="fancyboxlayout" rel="fancyboxlayout" href="img/20x30TableChairLayout.jpg" title="Table and chair layout for a 20 ft. by 30 ft. tent."></a>
                 <a class="fancyboxlayout" rel="fancyboxlayout" href="img/20x40TableChairLayout.jpg" title="Table and chair layout for a 20 ft. by 40 ft. tent."></a>
                 </div>
               </div>
+        </div>
+        <div class="small-12 show-for-small-only text-center">
+          <div class="panel">
+                  <h5>Set-Ups</h5>
+                <h6 class="subheader">View our suggested layout guides for all different tents.</h6>
+                <a href="#" style="background:#3B5998;" class="small button button3" style="max-width:100%;">Layouts</a>
+                <a class="fancyboxlayout" rel="fancyboxlayout" href="img/20x20TableChairLayout.jpg" title="Table and chair layout for a 20 ft. by 20 ft. tent."></a>
+                <a class="fancyboxlayout" rel="fancyboxlayout" href="img/20x30TableChairLayout.jpg" title="Table and chair layout for a 20 ft. by 30 ft. tent."></a>
+                <a class="fancyboxlayout" rel="fancyboxlayout" href="img/20x40TableChairLayout.jpg" title="Table and chair layout for a 20 ft. by 40 ft. tent."></a>
+                </div>
         </div>
  
        
@@ -243,8 +263,11 @@ google.maps.event.addDomListener(window, 'load', initialize);
             </div>
         </div>
       </footer>
+    </div>
  
-   
+   <div id="printable">
+    <img src="img/Pricelist.jpg">
+  </div>
  
  
  <!--
@@ -281,7 +304,7 @@ google.maps.event.addDomListener(window, 'load', initialize);
                 type    : 'html',
                 width   : '100%',
                 height  : '100%',
-                content : '<div class="fancybox-image" id="imagePrices" style="background-size: cover; background-position:50% 50%;background-repeat:no-repeat;height:100%;width:100%;"><a href="#" onClick=" window.print(); return false">Print this page!</a><img class="" src="'+ this.href +'"/></div>'
+                content : '<div class="fancybox-image" id="imagePrices" style="background-size: cover; background-position:50% 50%;background-repeat:no-repeat;height:100%;width:100%;"><a href="#" onClick="window.print(); return false">Print this page!</a><img class="" src="'+ this.href +'"/></div>'
             });
         }
     });
