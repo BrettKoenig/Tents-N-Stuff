@@ -1,5 +1,3 @@
-<html>
-<body>
 <?php
 if (isset($_REQUEST["email"]))
 {
@@ -10,8 +8,6 @@ if (isset($_REQUEST["email"]))
   $message = $_REQUEST["request"];
   mail($emailTwo, $subject, $message, "From:" . $address);
 }
-header('Location: http://www.tentsnstuffrentals.com/');
+	header('Location: http://www.tentsnstuffrentals.com/');
+	exit();
 ?>
-
-</body>
-</html>
