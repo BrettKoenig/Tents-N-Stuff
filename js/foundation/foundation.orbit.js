@@ -407,8 +407,8 @@
     settings: {
       animation: 'slide',
       timer_speed: 10000,
-      pause_on_hover: true,
-      resume_on_mouseout: false,
+      pause_on_hover: false,
+      resume_on_mouseout: true,
       next_on_click: true,
       animation_speed: 500,
       stack_on_small: false,
